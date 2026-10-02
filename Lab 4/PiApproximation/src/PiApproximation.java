@@ -29,7 +29,7 @@ public class PiApproximation {
 			}	
 		}
 		double pi = sum * 4;
-		System.out.println(pi);
+		System.out.println("Approximated value of Pi: " + pi);
 		
 		scan.close();
 	}
