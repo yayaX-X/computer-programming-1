@@ -3,7 +3,7 @@
  Title: Project 1
  Email: rilen01@purdue.edu
  Date: October 6, 2026
- Description: 
+ Description: Determine the mathematical properties of an integer.
 */
 
 import java.util.Scanner;
