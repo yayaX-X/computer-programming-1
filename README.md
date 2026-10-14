@@ -1,2 +1,2 @@
 # Computer Programming 1
-An assortment of minor projects to get familiar with Java.
+An assortment of class labs and projects to get familiar with Java.
