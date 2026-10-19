@@ -26,13 +26,14 @@ public class NumberProperties {
 		
 		
 		// Prime number check
-		Boolean isPrime = true;
+		boolean isPrime = true;
 		if (n <= 1) {
 			isPrime = false;
 		}
 		for (int i = 2; i < n; i++) {
 			if (n % i == 0)  {
 				isPrime = false;
+				break;
 			}
 		}
 		if (isPrime) {
@@ -45,43 +46,58 @@ public class NumberProperties {
 		// Calculate square and square root
 		System.out.println("Square: " + Math.round(Math.pow(n, 2)));
 		if (n < 0) {
-			System.out.println("Square Root: " + Math.sqrt(Math.abs(n)) + "i");	
+		    System.out.println("Square Root: " + Math.sqrt(-(double) n) + "i");
 		} else {
-			System.out.println("Square Root: " + Math.sqrt(Math.abs(n)));
+		    System.out.println("Square Root: " + Math.sqrt(n));
 		}
 		
 		
 		// Calculate sum of digits
 		int sum = 0;
-		int num = Math.abs(n);
-		while (num > 0) {
-			sum += num % 10;
-			num/= 10;
+		int num = n;
+		while (num != 0) {
+		    sum += Math.abs(num % 10);
+		    num /= 10;
 		}
 		System.out.println("Sum of Digits: " + sum);
 		
 		
 		// List all factors
 		System.out.print("Factors: ");
-		for (int i = 1; i < n; i++) {
-			if (n%i == 0) {
-				System.out.print(i + ", ");
-			}
+		if (n == 0) {
+		    System.out.println("All nonzero integers");
+		} else {
+		    num = Math.abs(n);
+		    for (int i = 1; i < num; i++) {
+		        if (num % i == 0) {
+		            if (i != 1) {
+		                System.out.print(", ");
+		            }
+		            System.out.print(i);
+		        }
+		    }
+		    if (num != 1) {
+		        System.out.print(", ");
+		    }
+		    System.out.println(num);
 		}
-		System.out.println(n);
 		
 		
 		// Palindrome Check
-		int nReversed = 0;
 		int num1 = n;
-		while (n > 0) {
-			nReversed = nReversed * 10 + n%10;
-			n = n / 10;
-		}
-		if (num1 == nReversed) {
-			System.out.println("Palindrome: Yes");
+		int nReversed = 0;
+		if (n < 0 || (n != 0 && n % 10 == 0)) {
+		    System.out.println("Palindrome: No");
 		} else {
-			System.out.println("Palindrome: No");
+		    while (num1 > nReversed) {
+		        nReversed = nReversed * 10 + num1 % 10;
+		        num1 /= 10;
+		    }
+		    if (num1 == nReversed || num1 == nReversed / 10) {
+		        System.out.println("Palindrome: Yes");
+		    } else {
+		        System.out.println("Palindrome: No");
+		    }
 		}
 		
 		
