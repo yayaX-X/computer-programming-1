@@ -3,7 +3,7 @@
  Title: Lab 6 Programming Assignment (Problem 2)
  Email: rilen01@purdue.edu
  Date: November 2, 2026
- Description: Creating a usre-defined array and listing the statistics of elements. 
+ Description: Creating a user-defined array and listing the statistics of elements. 
 */
 
 import java.util.Scanner;
