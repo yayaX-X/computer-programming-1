@@ -15,12 +15,12 @@ public class RetailCostCalculator {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		// Prompt UI
-		System.out.print("Enter the wholsesale cost: ");
+		System.out.print("Enter the wholesale cost: ");
 		double wholesale = scan.nextDouble();
 		System.out.print("Enter the markup percentage (%): ");
 		double markup = scan.nextDouble();
 		// Call method within formatted print statement
-		System.out.printf("Retail price = %.2f", calculateRetail(wholesale, markup));
+		System.out.printf("Retail Price = %.2f", calculateRetail(wholesale, markup));
 		scan.close();
 	}
 }

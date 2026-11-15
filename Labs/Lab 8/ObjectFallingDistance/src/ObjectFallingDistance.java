@@ -3,11 +3,11 @@
  Title: Lab 8 Programming Assignment (Problem 2)
  Email: rilen01@purdue.edu
  Date: November 15, 2026
- Description: Calculate the distance of a free-falling object based on time and position.
+ Description: Calculate the distance of a free-falling object based on time and gravity.
 */
 public class ObjectFallingDistance {
 // Calculation method
-	public static double fallingDistance(int t) {
+	public static double fallingDistance(double t) {
 		double d = (1.0/2.0) * 9.8* Math.pow(t, 2);
 		return d;
 	}
